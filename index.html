@@ -36,12 +36,13 @@
       <div class="home-content">
         <h1>M Juan Adi <span>Pratama</span></h1>
         <br>
-        <!-- <h3 class="text-animation">I'm a <span></span></h3> -->
         <p>
-          Saya mahasiswa Teknik Informatika dengan minat pada desain UI/UX. Saya
-          mampu dalam menggunakan figma untuk membuat antarmuka yang
-          fungsional dan menarik secara visual. Selain itu, saya memiliki
-          pengalaman dalam pengembangan website dan mobile.
+          Saya mahasiswa Teknik Informatika dari Global Institute yang memiliki ketertarikan pada bidang 
+          teknologi dan desain. Memiliki pemahaman dalam merancang website dan aplikasi serta mampu 
+          bekerja secara mandiri maupun dalam tim. Mudah beradaptasi dengan lingkungan baru, 
+          memiliki kemauan untuk terus belajar dan mengembangkan keterampilan, serta siap menghadapi 
+          tantangan baru. Dengan kemampuan yang saya miliki dan semangat untuk terus berkembang, 
+          saya siap memberikan kontribusi terbaik dalam mendukung tercapainya tujuan perusahaan.
         </p>
         <div class="social-icons">
           <a href="http://www.linkedin.com/in/m-juan-adi-pratama-9412262a8">
@@ -114,7 +115,7 @@
             <h3>GLOBAL INSTITUTE</h3>
             <p>
               Saya melanjutkan kuliah di Global Institute, sekarang mahasiswa
-              aktif S1 Teknik Informatika semester 6
+              aktif S1 Teknik Informatika semester 8
             </p>
           </div>
         </div>
@@ -125,76 +126,167 @@
     <!-- Project -->
     <section class="project" id="project">
       <h2 class="heading">Project</h2>
+
       <div class="project-container">
-        <div class="project-box">
+
+        <!-- Project 1 -->
+        <div class="project-box" onclick="openProject('cake-shop')">
           <div class="project-image">
-            <a
-              href="https://drive.google.com/file/d/1uxisyI2C0p_QxOTs6UY4f_JTiYqRPvbP/view?usp=drive_link">
-              <img src="img/project1.png" alt="" />
-              <span>UI UX</span>
-            </a>
+            <img src="img/project1.png" alt="Cake Shop UI UX Design" />
+            <span class="badge-uiux">UI UX</span>
           </div>
+
           <div class="project-info">
             <h4>Cake Shop</h4>
             <p>
-              Project ini tugas kuliah yang dilakukan secara berkelompok untuk
-              merancang desain UI/UX sebuah platform toko kue online. Tujuan
-              dari project ini adalah menciptakan pengalaman pengguna yang
-              menarik dan mempermudah pelanggan dalam memesan kue secara online.
+              Project tugas kuliah yang dilakukan secara berkelompok untuk
+              merancang desain UI/UX sebuah platform toko kue online.
             </p>
+
             <div class="technology">
               <span>Figma</span>
             </div>
           </div>
         </div>
 
-        <div class="project-box">
+        <!-- Project 2 -->
+        <div class="project-box" onclick="openProject('news-app')">
           <div class="project-image">
-            <a
-              href="https://drive.google.com/file/d/1ffZJbuTrjfFK8ZHB_cELgGxM-m4A8-l9/view?usp=sharing">
-              <img src="img/project2.png" alt="" />
-              <span>Mobile</span>
-            </a>
+            <img src="img/project2.png" alt="News App" />
+            <span class="badge-mobile">Mobile</span>
           </div>
+
           <div class="project-info">
             <h4>News App</h4>
             <p>
-              Project tugas kuliah yang dilakukan secara berkelompok untuk
-              mengembangkan News App menggunakan Flutter dan API. Tujuan dari
-              project ini untuk membangun aplikasi berita, sehingga dapat dengan
-              mudah membaca dan mendapatkan informasi terbaru secara real-time.
+              Project tugas kuliah yang dilakukan secara berkelompok untuk merancang aplikasi mobile 
+              berita menggunakan Flutter dan API.
             </p>
+
             <div class="technology">
               <span>Flutter</span>
+              <span>Dart</span>
               <span>API</span>
             </div>
           </div>
         </div>
 
-        <div class="project-box">
+        <!-- Project 3 -->
+        <div class="project-box" onclick="openProject('store-jersey')">
           <div class="project-image">
-            <a
-              href="https://drive.google.com/file/d/1HSfrkWqQ42smH0nUYssLIuw-71XfZAer/view?usp=drive_link">
-              <img src="img/project3.png" alt="" />
-              <span>UI UX</span>
-            </a>
+            <img src="img/project3.png" alt="Store Jersey UI UX Design" />
+            <span class="badge-uiux">UI UX</span>
           </div>
+
           <div class="project-info">
             <h4>Store Jersey</h4>
             <p>
-              Project tugas UAS mata kuliah Desain UI/UX yang bertujuan untuk
-              merancang sebuah platform e-commerce penjualan jersey olahraga.
-              Platform ini dirancang untuk memberikan pengalaman pengguna yang
-              optimal, mulai dari kemudahan navigasi dan tampilan visual yang
-              menarik.
+              Project UAS mata kuliah Desain UI/UX untuk merancang platform e-commerce penjualan jersey 
+              olahraga yang memiliki tampilan modern, navigasi yang mudah, serta memberikan pengalaman 
+              berbelanja yang nyaman bagi pengguna.
             </p>
+
             <div class="technology">
               <span>Figma</span>
             </div>
           </div>
         </div>
+
+        <!-- Project 4 -->
+        <div class="project-box" onclick="openProject('web-rans')">
+          <div class="project-image">
+            <img src="img/project4.png"/>
+            <span class="badge-web">Website</span>
+          </div>
+
+          <div class="project-info">
+            <h4>Website Rans</h4>
+            <p>
+              Project mata kuliah Pemrograman Berbasis Web untuk membuat website company dengan 
+              mengambil inspirasi dari RANS Entertainment. Website dirancang sebagai media informasi 
+              perusahaan dengan tampilan modern, menarik, dan responsif.
+            </p>
+
+            <div class="technology">
+              <span>HTML</span>
+              <span>Css</span>
+              <span>Javascript</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
+
+    <div class="project-modal" id="projectModal">
+
+      <div class="project-modal-content">
+
+        <!-- Close Button -->
+        <button class="project-modal-close" onclick="closeProject()">
+          &times;
+        </button>
+
+        <!-- Modal Image -->
+        <div class="modal-project-image">
+          <img id="modalImage" src="" alt="Project Preview" />
+        </div>
+
+        <!-- Modal Content -->
+        <div class="modal-project-info">
+
+          <div class="modal-project-heading">
+            <div>
+              <span id="modalCategory" class="modal-category"></span>
+              <h3 id="modalTitle"></h3>
+            </div>
+          </div>
+
+          <div class="modal-project-meta">
+            <div>
+              <small>Jenis Proyek</small>
+              <strong id="modalType"></strong>
+            </div>
+
+            <div>
+              <small>Peran</small>
+              <strong id="modalRole"></strong>
+            </div>
+          </div>
+
+          <div class="modal-section">
+            <h4>Deskripsi Proyek</h4>
+            <p id="modalDescription"></p>
+          </div>
+
+          <div class="modal-section">
+            <h4>Alat & Teknologi</h4>
+            <div class="modal-technologies" id="modalTechnologies">
+            </div>
+          </div>
+
+          <!-- Project Buttons -->
+          <div class="modal-project-buttons">
+
+            <a
+              id="modalProjectLink"
+              href="#"
+              target="_blank"
+              class="modal-btn primary-btn"
+            >
+              View Project
+            </a>
+
+            <button
+              onclick="closeProject()"
+              class="modal-btn secondary-btn"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- End Project -->
 
     <!-- Sertificate -->
