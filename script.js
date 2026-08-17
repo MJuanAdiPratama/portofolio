@@ -91,9 +91,9 @@ const projects = {
     description:
       "Project tugas kuliah mata kuliah Pemrograman Berbasis Web untuk membuat website company dengan mengambil inspirasi dari RANS Entertainment. Website dirancang sebagai media informasi perusahaan dengan tampilan modern, menarik, dan responsif.",
 
-    technologies: ["Figma"],
+    technologies: ["HTML", "Css", "Javascript"],
 
-    link: "https://www.figma.com/design/3gZLmHAjSjktPkaf5DdKog/Store-Jersey-App?node-id=0-1&t=hdBPt7tG7lkoWWCd-1",
+    link: "",
   },
 };
 
