@@ -63,7 +63,7 @@ const projects = {
 
     technologies: ["Flutter", "Dart", "API"],
 
-    link: "https://drive.google.com/file/d/1ffZJbuTrjfFK8ZHB_cELgGxM-m4A8-l9/view?usp=sharing",
+    link: "",
   },
 
   "store-jersey": {
