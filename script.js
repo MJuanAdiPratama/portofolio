@@ -67,7 +67,7 @@ const projects = {
   },
 
   "store-sepatu": {
-    title: "Website Store Sepatu",
+    title: "Store Sepatu",
     category: "Web",
     type: "Mandiri",
     role: "Fullstack",
@@ -97,7 +97,7 @@ const projects = {
   },
 
   "wiyata-insani": {
-    title: "Website Wiyata Insani",
+    title: "Yayasan Wiyata Insani",
     category: "Web",
     type: "Pengabdian Kepada Masyarakat",
     role: "Frontend",
@@ -112,10 +112,10 @@ const projects = {
   },
 
   "franada-parfume": {
-    title: "Website Franada Parfume",
+    title: "Franada Parfume",
     category: "Web",
     type: "Tugas Kelompok",
-    role: "Frontend",
+    role: "Frontend & UI UX",
     image: "img/project6.png",
 
     description:
