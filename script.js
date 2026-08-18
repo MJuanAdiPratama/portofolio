@@ -39,39 +39,24 @@ const projects = {
   "cake-shop": {
     title: "Cake Shop",
     category: "UI UX",
-    type: "Tugas Kelompok",
+    type: "Kelompok",
     role: "UI/UX Designer",
     image: "img/project1.png",
 
     description:
-      "Project tugas kuliah yang dilakukan secara berkelompok untuk merancang desain UI/UX sebuah platform toko kue online. Project ini bertujuan untuk menciptakan pengalaman pengguna yang menarik, nyaman, dan mempermudah pelanggan dalam mencari serta memesan kue secara online.",
+      "Project tugas kuliah Rekayasa Perangkat Lunak yang bertujuan untuk merancang desain UI/UX sebuah platform toko kue online. Project ini bertujuan untuk menciptakan pengalaman pengguna yang menarik, nyaman, dan mempermudah pelanggan dalam mencari serta memesan kue secara online.",
 
     technologies: ["Figma"],
 
     link: "https://www.figma.com/design/0THMBQHuPY3K61F21QCagv/Cake-App?node-id=0-1&t=J4CPTgK7yFzxd8wN-1",
   },
 
-  "news-app": {
-    title: "News App",
-    category: "Mobile",
-    type: "Tugas Kelompok",
-    role: "UI/UX Designer",
-    image: "img/project2.png",
-
-    description:
-      "Project tugas kuliah yang dilakukan secara berkelompok untuk mengembangkan aplikasi berita menggunakan Flutter dan API. Aplikasi ini dibuat untuk membantu pengguna membaca dan mendapatkan informasi berita terbaru dengan lebih mudah.",
-
-    technologies: ["Flutter", "Dart", "API"],
-
-    link: "",
-  },
-
   "store-jersey": {
     title: "Store Jersey",
     category: "UI UX",
-    type: "Tugas Mandiri",
+    type: "Mandiri",
     role: "UI/UX Designer",
-    image: "img/project3.png",
+    image: "img/project2.png",
 
     description:
       "Project tugas UAS mata kuliah Desain UI/UX yang bertujuan untuk merancang sebuah platform e-commerce penjualan jersey olahraga. Platform ini dirancang untuk memberikan pengalaman pengguna yang optimal melalui navigasi yang mudah dan tampilan visual yang menarik.",
@@ -81,19 +66,49 @@ const projects = {
     link: "https://www.figma.com/design/3gZLmHAjSjktPkaf5DdKog/Store-Jersey-App?node-id=0-1&t=hdBPt7tG7lkoWWCd-1",
   },
 
-  "web-rans": {
+  "store-sepatu": {
+    title: "Website Store Sepatu",
+    category: "Web",
+    type: "Mandiri",
+    role: "Fullstack",
+    image: "img/project3.png",
+
+    description:
+      "Project UAS mata kuliah Pemrograman Berbasis Web untuk membuat website ecommerce sepatu dengan fitur pencarian produk, manajemen kategori, dashboard admin dan pemesanan melalui WhatsApp.",
+
+    technologies: ["HTML", "Css", "PHP", "MySql"],
+
+    link: "https://github.com/MJuanAdiPratama/store-sepatu",
+  },
+
+  "web-company": {
     title: "Website Rans",
     category: "Web",
-    type: "Tugas Mandiri",
+    type: "Mandiri",
     role: "Frontend",
     image: "img/project4.png",
 
     description:
-      "Project tugas kuliah mata kuliah Pemrograman Berbasis Web untuk membuat website company dengan mengambil inspirasi dari RANS Entertainment. Website dirancang sebagai media informasi perusahaan dengan tampilan modern, menarik, dan responsif.",
+      "Project tugas kuliah mata kuliah Perancangan Web untuk membuat website company yang mengambil inspirasi dari RANS Entertainment. Website dirancang sebagai media informasi perusahaan dengan tampilan modern, menarik, dan responsif.",
 
     technologies: ["HTML", "Css", "Javascript"],
 
     link: "",
+  },
+
+  "wiyata-insani": {
+    title: "Website Wiyata Insani",
+    category: "Web",
+    type: "Pengabdian Kepada Masyarakat",
+    role: "Frontend",
+    image: "img/project5.png",
+
+    description:
+      "Project Pengabdian Kepada Masyarakat (PKM) membuat website yayasan untuk media informasi dan pendaftaran siswa baru yang mencakup tingkat TK, SD, SMP, dan SMK.",
+
+    technologies: ["CodeIgniter", "Css", "PHP", "MySql"],
+
+    link: "https://github.com/VanZainur/WebMitraPermata.git",
   },
 };
 
