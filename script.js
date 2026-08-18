@@ -345,7 +345,6 @@ document.addEventListener("keydown", function (event) {
 const GOOGLE_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbyCWBxk87iaOpWRBy3zUuv9nqiaGTJDGul4Gpe5ra9K6v2TR-pyMcMTJXAO1hysouHjkg/exec";
 
-
 // =========================
 // ELEMENT
 // =========================
