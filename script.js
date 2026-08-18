@@ -110,6 +110,21 @@ const projects = {
 
     link: "https://github.com/VanZainur/WebMitraPermata.git",
   },
+
+  "franada-parfume": {
+    title: "Website Franada Parfume",
+    category: "Web",
+    type: "Tugas Kelompok",
+    role: "Frontend",
+    image: "img/project6.png",
+
+    description:
+      "Project UAS mata kuliah Technopreneur & Manajemen Proyek membuat website UMKM untuk media promosi Franada Parfume, menampilkan katalog produk dan informasi brand guna memperluas jangkauan pemasaran secara digital.",
+
+    technologies: ["PHP", "Css", "Javascript", "Laravel"],
+
+    link: "https://github.com/Mifta24/Mistify.git",
+  },
 };
 
 // =========================
