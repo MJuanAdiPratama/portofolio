@@ -125,6 +125,21 @@ const projects = {
 
     link: "https://github.com/Mifta24/Mistify.git",
   },
+
+  "bakso-djatigiri": {
+    title: "Bakso Djatigiri App",
+    category: "Mobile",
+    type: "Tugas Kelompok",
+    role: "Frontend & UI UX",
+    image: "img/project7.png",
+
+    description:
+      "Project Aplikasi Mobile UAS membuat aplikasi UMKM di Bakso Djatigiri untuk sistem kasir dan manajemen stok, dilengkapi fitur pencatatan transaksi penjualan dan pemantauan stok barang secara real-time.",
+
+    technologies: ["Flutter", "Dart", "Firebase"],
+
+    link: "",
+  },
 };
 
 // =========================
