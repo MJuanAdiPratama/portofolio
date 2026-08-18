@@ -82,7 +82,7 @@ const projects = {
   },
 
   "web-company": {
-    title: "Website Rans",
+    title: "Website Company (Rans)",
     category: "Web",
     type: "Mandiri",
     role: "Frontend",
@@ -93,7 +93,7 @@ const projects = {
 
     technologies: ["HTML", "Css", "Javascript"],
 
-    link: "",
+    link: "https://github.com/MJuanAdiPratama/web_company.git",
   },
 
   "wiyata-insani": {
