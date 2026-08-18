@@ -536,7 +536,6 @@ span {
 }
 
 /* MODAL CONTENT */
-
 .project-modal-content {
   position: relative;
   background: white;
@@ -554,7 +553,6 @@ span {
 }
 
 /* CLOSE BUTTON */
-
 .project-modal-close {
   position: absolute;
   top: 15px;
@@ -619,25 +617,21 @@ span {
 }
 
 /* BADGE UI/UX */
-
 .modal-category.badge-uiux {
   background-color: #8b5cf6;
 }
 
 /* BADGE MOBILE */
-
 .modal-category.badge-mobile {
   background-color: #16c47f;
 }
 
 /* BADGE WEB */
-
 .modal-category.badge-web {
   background-color: #3b82f6;
 }
 
 /* MODAL TITLE */
-
 .modal-project-heading h3 {
   font-size: 2rem;
   font-weight: 700;
@@ -828,49 +822,312 @@ span {
 
 .contact {
   background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .contact h2 {
   margin-bottom: 3rem;
   color: white;
-}
-
-.contact form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  margin: 5rem auto;
   text-align: center;
 }
 
-.contact form .input-box {
+/* FORM */
+
+.contact form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 5rem auto 0;
+  text-align: center;
 }
 
-.contact form .input-box input,
+/* INPUT GROUP */
+
+.contact .input-group {
+  width: 100%;
+}
+
+.contact .input-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* INPUT & TEXTAREA */
+
+.contact form input,
 .contact form textarea {
   width: 100%;
-  padding: 2.5rem;
-  font-size: 1.8rem;
+  padding: 1.5rem 2rem;
+  font-family: "Poppins", serif;
+  font-size: 1.5rem;
+  font-weight: 500;
   color: var(--text-color);
-  background: var(--second-bg-color);
-  border-radius: 2rem;
+  background-color: var(--second-bg-color);
   border: 2px solid var(--main-color);
-  margin: 1.5rem 0;
-  resize: none;
+  border-radius: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: 0.3s ease;
 }
 
-.contact form .btn {
-  margin-top: 1rem;
+/* INPUT */
+
+.contact form input {
+  height: 60px;
 }
+
+/* TEXTAREA */
+
+.contact form textarea {
+  min-height: 220px;
+  resize: vertical;
+  margin-bottom: 1.5rem;
+}
+
+/* PLACEHOLDER */
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+/* FOCUS */
+
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+/* PESAN */
+
+.contact .input-group-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   BUTTON KIRIM PESAN
+========================= */
+
+.contact-submit {
+  width: fit-content;
+  min-width: 160px;
+  padding: 1.2rem 2.5rem;
+  margin-top: 0.5rem;
+
+  background-color: var(--main-color);
+
+  /* INI YANG MEMBUAT TEKS PUTIH */
+  color: white;
+
+  border: 2px solid var(--main-color);
+  border-radius: 4rem;
+
+  font-family: "Poppins", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease-in-out;
+}
+
+/* Pastikan teks di dalam button juga putih */
+.contact-submit .btn-text,
+.contact-submit .btn-loading {
+  color: black;
+}
+
+/* Hover */
+.contact-submit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+/* =========================
+   LOADING BUTTON
+========================= */
+.contact-submit .btn-text {
+  display: inline;
+}
+
+.contact-submit .btn-loading {
+  display: none;
+}
+
+/* Saat sedang mengirim */
+.contact-submit.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.contact-submit.loading .btn-text {
+  display: none;
+}
+
+.contact-submit.loading .btn-loading {
+  display: inline;
+}
+
+/* =========================
+   CONTACT POPUP
+========================= */
+.contact-popup {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+/* POPUP AKTIF */
+.contact-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================
+   POPUP CONTENT
+========================= */
+.contact-popup-content {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  padding: 3rem 2.5rem;
+  background-color: white;
+  border-radius: 2rem;
+  text-align: center;
+  color: black;
+  transform: translateY(30px) scale(0.95);
+  transition: 0.3s ease;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+/* ANIMASI POPUP */
+.contact-popup.active .contact-popup-content {
+  transform: translateY(0) scale(1);
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: #eee;
+  color: #333;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.popup-close:hover {
+  background-color: var(--main-color);
+  color: black;
+}
+
+/* =========================
+   POPUP ICON
+========================= */
+.popup-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+/* SUCCESS */
+.success-icon {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+/* ERROR */
+.error-icon {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+/* =========================
+   POPUP TITLE
+========================= */
+.contact-popup-content h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+/* =========================
+   POPUP MESSAGE
+========================= */
+.contact-popup-content p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   POPUP BUTTON
+========================= */
+.popup-btn {
+  min-width: 120px;
+  padding: 1rem 2.5rem;
+  font-size: 1.4rem;
+}
+
+/* =========================
+   ERROR STATE
+========================= */
+.error-icon {
+  display: none;
+}
+
+.contact-popup.error .success-icon {
+  display: none;
+}
+
+.contact-popup.error .error-icon {
+  display: flex;
+}
+
+/* =========================
+   END CONTACT
+========================= */
+
 
 /* =========================
    FOOTER
 ========================= */
-
 .footer {
   position: relative;
   bottom: 0;

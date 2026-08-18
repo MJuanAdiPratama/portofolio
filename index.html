@@ -420,31 +420,118 @@
     <!-- End Sertificate -->
 
     <!-- Contact -->
+    <!-- CONTACT -->
     <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me</span></h2>
 
-      <form action="">
+      <h2 class="heading">
+        Contact <span>Me</span>
+      </h2>
+
+      <form id="contact-form">
+
+        <!-- INPUT GROUP -->
         <div class="input-group">
+
           <div class="input-box">
-            <input type="text" placeholder="Nama Lengkap" />
-            <input type="email" placeholder="Email" />
-          </div>
-          <div class="input-box">
-            <input type="text" placeholder="No Handphone" />
-            <input type="text" placeholder="Subject" />
+
+            <input
+              type="text"
+              name="nama"
+              placeholder="Nama Lengkap"
+              autocomplete="name"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              autocomplete="email"
+              required
+            />
+
           </div>
         </div>
+
+        <!-- PESAN -->
         <div class="input-group-2">
+
           <textarea
-            name=""
-            id=""
+            name="pesan"
             cols="30"
             rows="10"
-            placeholder="Masukkan Pesan"></textarea>
-          <input type="submit" value="Kirim Pesan" class="btn" />
+            placeholder="Masukkan Pesan"
+            required
+          ></textarea>
+
+          <!-- BUTTON -->
+          <button
+            type="submit"
+            class="btn contact-submit"
+            id="submit-btn"
+          >
+            <span class="btn-text">Kirim Pesan</span>
+            <span class="btn-loading">
+              Mengirim...
+            </span>
+          </button>
+
         </div>
       </form>
     </section>
+    <!-- END CONTACT -->
+
+    <!-- =========================
+        CONTACT POPUP
+    ========================= -->
+    <div
+      class="contact-popup"
+      id="contact-popup"
+    >
+      <div class="contact-popup-content">
+
+        <button
+          type="button"
+          class="popup-close"
+          id="popup-close"
+          aria-label="Tutup"
+        >
+          &times;
+        </button>
+
+        <div
+          class="popup-icon success-icon"
+          id="success-icon"
+        >
+          <i class='bx bx-check'></i>
+        </div>
+
+        <div
+          class="popup-icon error-icon"
+          id="error-icon"
+        >
+          <i class='bx bx-x'></i>
+        </div>
+
+        <h3 id="popup-title">
+          Pesan Terkirim!
+        </h3>
+
+        <p id="popup-message">
+          Terima kasih sudah menghubungi saya.
+          Pesan kamu berhasil dikirim.
+        </p>
+
+        <button
+          type="button"
+          class="btn popup-btn"
+          id="popup-ok"
+        >
+          Oke
+        </button>
+
+      </div>
+    </div>
     <!-- End Contact -->
 
     <!-- Footer -->

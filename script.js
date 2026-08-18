@@ -156,7 +156,6 @@ function openProject(projectId) {
     return;
   }
 
-
   // =========================
   // AMBIL ELEMENT MODAL
   // =========================
@@ -336,5 +335,268 @@ document.addEventListener("keydown", function (event) {
     closeProject();
 
   }
-
 });
+
+// =========================
+// CONTACT FORM
+// =========================
+
+// URL Google Apps Script
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbyCWBxk87iaOpWRBy3zUuv9nqiaGTJDGul4Gpe5ra9K6v2TR-pyMcMTJXAO1hysouHjkg/exec";
+
+
+// =========================
+// ELEMENT
+// =========================
+
+const contactForm =
+  document.getElementById("contact-form");
+
+const submitButton =
+  document.getElementById("submit-btn");
+
+const contactPopup =
+  document.getElementById("contact-popup");
+
+const popupTitle =
+  document.getElementById("popup-title");
+
+const popupMessage =
+  document.getElementById("popup-message");
+
+const popupClose =
+  document.getElementById("popup-close");
+
+const popupOk =
+  document.getElementById("popup-ok");
+
+
+// =========================
+// OPEN POPUP
+// =========================
+
+function openContactPopup(type) {
+
+  // Hapus class error sebelumnya
+  contactPopup.classList.remove("error");
+
+
+  // =========================
+  // SUCCESS
+  // =========================
+
+  if (type === "success") {
+
+    popupTitle.textContent =
+      "Pesan Terkirim!";
+
+    popupMessage.textContent =
+      "Terima kasih sudah menghubungi saya. Pesan kamu berhasil dikirim.";
+
+  }
+
+
+  // =========================
+  // ERROR
+  // =========================
+
+  else {
+
+    contactPopup.classList.add("error");
+
+    popupTitle.textContent =
+      "Pesan Gagal!";
+
+    popupMessage.textContent =
+      "Maaf, pesan kamu belum berhasil dikirim. Silakan coba lagi.";
+
+  }
+
+
+  // Tampilkan popup
+  contactPopup.classList.add("active");
+
+  // Matikan scroll halaman
+  document.body.style.overflow = "hidden";
+}
+
+
+// =========================
+// CLOSE POPUP
+// =========================
+
+function closeContactPopup() {
+
+  contactPopup.classList.remove("active");
+
+  contactPopup.classList.remove("error");
+
+  // Aktifkan kembali scroll
+  document.body.style.overflow = "";
+}
+
+
+// =========================
+// SUBMIT FORM
+// =========================
+
+contactForm.addEventListener(
+  "submit",
+  async function (event) {
+
+    // Mencegah halaman refresh
+    event.preventDefault();
+
+
+    // =========================
+    // VALIDASI URL
+    // =========================
+
+    if (
+      !GOOGLE_SCRIPT_URL ||
+      GOOGLE_SCRIPT_URL ===
+        "MASUKKAN_URL_GOOGLE_APPS_SCRIPT_KAMU_DI_SINI"
+    ) {
+
+      console.error(
+        "Google Apps Script URL belum diisi."
+      );
+
+      openContactPopup("error");
+
+      return;
+    }
+
+
+    // =========================
+    // LOADING
+    // =========================
+
+    submitButton.classList.add("loading");
+
+    submitButton.disabled = true;
+
+
+    try {
+
+      // =========================
+      // AMBIL DATA FORM
+      // =========================
+
+      const formData =
+        new FormData(contactForm);
+
+
+      // =========================
+      // KIRIM DATA
+      // =========================
+
+      await fetch(
+        GOOGLE_SCRIPT_URL,
+        {
+          method: "POST",
+
+          body: formData,
+
+          mode: "no-cors"
+        }
+      );
+
+
+      // =========================
+      // SUCCESS
+      // =========================
+
+      openContactPopup("success");
+
+
+      // Kosongkan form
+      contactForm.reset();
+
+
+    } catch (error) {
+
+      // =========================
+      // ERROR
+      // =========================
+
+      console.error(
+        "Error mengirim pesan:",
+        error
+      );
+
+      openContactPopup("error");
+
+    }
+
+
+    // =========================
+    // SELESAI LOADING
+    // =========================
+
+    submitButton.classList.remove("loading");
+
+    submitButton.disabled = false;
+
+  }
+);
+
+
+// =========================
+// CLOSE POPUP BUTTON X
+// =========================
+
+popupClose.addEventListener(
+  "click",
+  function () {
+    closeContactPopup();
+  }
+);
+
+
+// =========================
+// CLOSE POPUP BUTTON OKE
+// =========================
+
+popupOk.addEventListener(
+  "click",
+  function () {
+    closeContactPopup();
+  }
+);
+
+
+// =========================
+// CLOSE CLICK OUTSIDE
+// =========================
+
+contactPopup.addEventListener(
+  "click",
+  function (event) {
+
+    if (event.target === contactPopup) {
+      closeContactPopup();
+    }
+
+  }
+);
+
+
+// =========================
+// CLOSE WITH ESC
+// =========================
+
+document.addEventListener(
+  "keydown",
+  function (event) {
+
+    if (
+      event.key === "Escape" &&
+      contactPopup.classList.contains("active")
+    ) {
+      closeContactPopup();
+    }
+
+  }
+);
