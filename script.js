@@ -138,7 +138,7 @@ const projects = {
 
     technologies: ["Flutter", "Dart", "Firebase"],
 
-    link: "",
+    link: "https://github.com/ariebhewhe/globalSabtuGenap2425.git",
   },
 };
 
