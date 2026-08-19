@@ -115,7 +115,7 @@ const projects = {
     title: "Franada Parfume",
     category: "Web",
     type: "Tugas Kelompok",
-    role: "Frontend & UI UX",
+    role: "UI/UX Designer",
     image: "img/project6.png",
 
     description:
