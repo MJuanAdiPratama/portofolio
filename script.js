@@ -76,7 +76,7 @@ const projects = {
     description:
       "Project UAS mata kuliah Pemrograman Berbasis Web untuk membuat website ecommerce sepatu dengan fitur pencarian produk, manajemen kategori, dashboard admin dan pemesanan melalui WhatsApp.",
 
-    technologies: ["HTML", "Css", "PHP", "MySql"],
+    technologies: ["Css", "PHP", "MySql"],
 
     link: "https://github.com/MJuanAdiPratama/store-sepatu",
   },
@@ -89,9 +89,9 @@ const projects = {
     image: "img/project4.png",
 
     description:
-      "Project tugas kuliah mata kuliah Perancangan Web untuk membuat website company yang mengambil inspirasi dari RANS Entertainment. Website dirancang sebagai media informasi perusahaan dengan tampilan modern, menarik, dan responsif.",
+      "Project mata kuliah Perancangan Web untuk membuat website company dengan mengambil inspirasi dari RANS Entertainment. Website dirancang menggunakan Bootstrap sebagai media informasi perusahaan.",
 
-    technologies: ["HTML", "Css", "Javascript"],
+    technologies: ["Css", "Javascript"],
 
     link: "https://github.com/MJuanAdiPratama/web_company.git",
   },
@@ -104,9 +104,9 @@ const projects = {
     image: "img/project5.png",
 
     description:
-      "Project Pengabdian Kepada Masyarakat (PKM) membuat website yayasan untuk media informasi dan pendaftaran siswa baru yang mencakup tingkat TK, SD, SMP, dan SMK.",
+      "Project Pengabdian Kepada Masyarakat (PKM) membuat website yayasan yang dirancang dengan CodeIgniter untuk media informasi dan pendaftaran siswa baru yang mencakup tingkat TK, SD, SMP, dan SMK.",
 
-    technologies: ["CodeIgniter", "Css", "PHP", "MySql"],
+    technologies: ["Css", "PHP", "MySql"],
 
     link: "https://github.com/VanZainur/WebMitraPermata.git",
   },
@@ -119,9 +119,9 @@ const projects = {
     image: "img/project6.png",
 
     description:
-      "Project UAS mata kuliah Technopreneur & Manajemen Proyek membuat website UMKM untuk media promosi Franada Parfume, menampilkan katalog produk dan informasi brand guna memperluas jangkauan pemasaran secara digital.",
+      "Project UAS Technopreneur & Manajemen Proyek membuat website UMKM yang dirancang dengan Laravel untuk media promosi Franada Parfume, menampilkan katalog produk dan informasi brand untuk memperluas jangkauan pemasaran secara digital.",
 
-    technologies: ["PHP", "Css", "Javascript", "Laravel"],
+    technologies: ["PHP", "Css", "Javascript"],
 
     link: "https://github.com/Mifta24/Mistify.git",
   },
