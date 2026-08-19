@@ -91,7 +91,7 @@ const projects = {
     description:
       "Project mata kuliah Perancangan Web untuk membuat website company dengan mengambil inspirasi dari RANS Entertainment. Website dirancang menggunakan Bootstrap sebagai media informasi perusahaan.",
 
-    technologies: ["Css", "Javascript"],
+    technologies: ["Css", "PHP", "Javascript"],
 
     link: "https://github.com/MJuanAdiPratama/web_company.git",
   },
@@ -106,7 +106,7 @@ const projects = {
     description:
       "Project Pengabdian Kepada Masyarakat (PKM) membuat website yayasan yang dirancang dengan CodeIgniter untuk media informasi dan pendaftaran siswa baru yang mencakup tingkat TK, SD, SMP, dan SMK.",
 
-    technologies: ["Css", "PHP", "MySql"],
+    technologies: ["Css", "PHP", "Javascript", "MySql"],
 
     link: "https://github.com/VanZainur/WebMitraPermata.git",
   },
