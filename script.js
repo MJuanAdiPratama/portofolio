@@ -119,7 +119,7 @@ const projects = {
     image: "img/project6.png",
 
     description:
-      "Project UAS Technopreneur & Manajemen Proyek membuat website UMKM yang dirancang dengan Laravel untuk media promosi Franada Parfume, menampilkan informasi brand untuk memperluas jangkauan pemasaran digital.",
+      "Project UAS Technopreneur & Manajemen Proyek membuat website UMKM yang dirancang dengan Laravel untuk media promosi Franada Parfume dan menampilkan informasi brand untuk memperluas jangkauan pemasaran digital.",
 
     technologies: ["PHP", "Css", "Javascript"],
 
