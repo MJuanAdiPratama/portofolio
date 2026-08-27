@@ -540,12 +540,32 @@ const certificates = {
   },
 
   certificate7: {
-    title: "Sertifikat Microsoft Office Spesialist",
+    title: "Microsoft Office Spesialist",
     issuer: "Global Institute",
     image: "img/sertificate7.png",
     pdf: "asset/Sertifikasi MOS.pdf",
   },
 
+  certificate8: {
+    title: "Test of English for International Communication",
+    issuer: "Global Institute",
+    image: "img/sertificate8.png",
+    pdf: "asset/Sertifikat TOEIC.pdf",
+  },
+
+  certificate9: {
+    title: "LKBB Bimantara Se-Banten",
+    issuer: "Global Institute",
+    image: "img/sertificate9.jpg",
+    pdf: "asset/Sertifikat LKBB.pdf",
+  },
+
+  certificate10: {
+    title: "The Difference Between Ul and UX: Understanding the Core Concepts",
+    issuer: "Kesatria Academy",
+    image: "img/sertificate10.png",
+    pdf: "asset/Sertifikat NgabuburIT.pdf",
+  },
 };
 
 // =========================
@@ -600,7 +620,7 @@ function openCertificate(certificateId) {
   modalImage.alt =
     certificate.title;
   modalLabel.textContent =
-    "Sertifikat";
+    "Sertificate";
   modalTitle.textContent =
     certificate.title;
   modalIssuer.textContent =
@@ -680,7 +700,6 @@ document
 // =========================
 // CLOSE WITH ESC
 // =========================
-
 document.addEventListener(
   "keydown",
   function (event) {
