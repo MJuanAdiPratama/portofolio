@@ -390,7 +390,7 @@ contactForm.addEventListener(
     if (
       !GOOGLE_SCRIPT_URL ||
       GOOGLE_SCRIPT_URL ===
-        "https://script.google.com/macros/s/AKfycbz2zRNIhRFYSWTkZCWg1MrdXRkwq9OwCKKpAtUBCHELRT9HntKb-hhmk5ZmfUsGH6co8Q/exec"
+        ""
     ) {
       console.error("Google Apps Script URL belum diisi.");
       openContactPopup("error");
