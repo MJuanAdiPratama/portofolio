@@ -362,61 +362,172 @@
 
     <!-- Sertificate -->
     <section class="sertificate" id="sertificate">
-      <h2 class="heading">Sertificate</h2>
+
+      <h2 class="heading">
+        Sertificate
+      </h2>
+
       <div class="sertificate-container">
-        <div class="sertificate-box">
+
+        <!-- CERTIFICATE 1 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate1')">
           <div class="sertificate-image">
-            <a href="asset/Sertifikat Dicoding (Dasar Pemrograman Web).pdf"
-              ><img src="img/sertificate1.png"
-            /></a>
+            <img src="img/sertificate1.png" alt="Sertifikat Dasar Pemrograman Web"/>
+            <div class="sertificate-overlay">
+              <i class='bx bx-show'></i>
+              <span>Lihat Sertifikat</span>
+            </div>
           </div>
         </div>
 
-        <div class="sertificate-box">
+        <!-- CERTIFICATE 2 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate2')">
           <div class="sertificate-image">
-            <a href="asset/Sertifikat Dicoding (Front End Web Pemula).pdf"
-              ><img src="img/sertificate2.png"
-            /></a>
+            <img src="img/sertificate2.png" alt="Sertifikat Front-End Web Pemula"/>
+            <div class="sertificate-overlay">
+              <i class='bx bx-show'></i>
+              <span>Lihat Sertifikat</span>
+            </div>
           </div>
         </div>
 
-        <div class="sertificate-box">
+        <!-- CERTIFICATE 3 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate3')">
           <div class="sertificate-image">
+            <img src="img/sertificate3.png" alt="Sertifikat Dasar Pemrograman JavaScript"/>
+            <div class="sertificate-overlay">
+              <i class='bx bx-show'></i>
+              <span>Lihat Sertifikat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 4 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate4')">
+          <div class="sertificate-image">
+            <img src="img/sertificate4.png" alt="Sertifikat Dasar AI"/>
+            <div class="sertificate-overlay">
+              <i class='bx bx-show'></i>
+              <span>Lihat Sertifikat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 5 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate5')">
+          <div class="sertificate-image">
+            <img src="img/sertificate5.png" alt="Sertifikat Webinar Mikrotik VPN"/>
+            <div class="sertificate-overlay">
+              <i class='bx bx-show'></i>
+              <span>Lihat Sertifikat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 6 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate6')">
+          <div class="sertificate-image">
+            <img src="img/sertificate6.png" alt="Sertifikat Ancaman Cyber Global"/>
+            <div class="sertificate-overlay">
+              <i class='bx bx-show'></i>
+              <span>Lihat Sertifikat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 7 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate7')">
+          <div class="sertificate-image">
+            <img src="img/sertificate7.png" alt="Sertifikat Microsoft Office Spesialist"/>
+            <div class="sertificate-overlay">
+              <i class='bx bx-show'></i>
+              <span>Lihat Sertifikat</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <div
+      class="certificate-modal"
+      id="certificateModal"
+    >
+
+      <div class="certificate-modal-content">
+
+        <!-- CLOSE -->
+        <button
+          type="button"
+          class="certificate-modal-close"
+          id="certificateModalClose"
+          aria-label="Tutup"
+        >
+          &times;
+        </button>
+
+
+        <!-- IMAGE -->
+        <div class="modal-certificate-image">
+
+          <img
+            src=""
+            id="certificateModalImage"
+            alt=""
+          />
+
+        </div>
+
+
+        <!-- INFORMATION -->
+        <div class="modal-certificate-info">
+
+          <span
+            class="modal-certificate-label"
+            id="certificateModalLabel"
+          >
+            Sertifikat
+          </span>
+
+          <h3 id="certificateModalTitle">
+            Nama Sertifikat
+          </h3>
+
+          <p id="certificateModalIssuer">
+            Penyelenggara
+          </p>
+
+
+          <!-- BUTTON -->
+          <div class="modal-certificate-buttons">
+
             <a
-              href="asset/Sertifikat Dicoding (Dasar Pemrograman Javascript).pdf"
-              ><img src="img/sertificate3.png"
-            /></a>
-          </div>
-        </div>
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="modal-certificate-btn primary-certificate-btn"
+              id="certificateModalLink"
+            >
+              <i class='bx bx-file'></i>
+              Lihat Sertifikat
+            </a>
 
-        <div class="sertificate-box">
-          <div class="sertificate-image">
-            <a href="asset/Sertifikat Dicoding (Dasar AI).pdf"
-              ><img src="img/sertificate4.png"
-            /></a>
-          </div>
-        </div>
+            <button
+              type="button"
+              class="modal-certificate-btn secondary-certificate-btn"
+              id="certificateModalOk"
+            >
+              Tutup
+            </button>
 
-        <div class="sertificate-box">
-          <div class="sertificate-image">
-            <a href="asset/Sertifikat Webinar (Mikrotik VPN).pdf"
-              ><img src="img/sertificate5.png"
-            /></a>
-          </div>
-        </div>
-
-        <div class="sertificate-box">
-          <div class="sertificate-image">
-            <a href="asset/Sertifikat UGM (Ancaman Cyber Global).pdf"
-              ><img src="img/sertificate6.png" alt=""
-            /></a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <!-- End Sertificate -->
 
-    <!-- CONTACT -->
+    <!-- Contact -->
     <section class="contact" id="contact">
 
       <h2 class="heading">
@@ -475,11 +586,7 @@
         </div>
       </form>
     </section>
-    <!-- END CONTACT -->
-
-    <!-- =========================
-        CONTACT POPUP
-    ========================= -->
+    
     <div
       class="contact-popup"
       id="contact-popup"

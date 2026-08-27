@@ -186,7 +186,6 @@ function openProject(projectId) {
   const modalProjectLink =
     document.getElementById("modalProjectLink");
 
-
   // =========================
   // ISI DATA PROJECT
   // =========================
@@ -194,7 +193,6 @@ function openProject(projectId) {
   // Gambar
   modalImage.src = project.image;
   modalImage.alt = project.title;
-
 
   // =========================
   // CATEGORY / BADGE
@@ -211,19 +209,12 @@ function openProject(projectId) {
 
   // Tambahkan class berdasarkan kategori
   if (project.category === "UI UX") {
-
     modalCategory.classList.add("badge-uiux");
-
   } else if (project.category === "Mobile") {
-
     modalCategory.classList.add("badge-mobile");
-
   } else if (project.category === "Web") {
-
     modalCategory.classList.add("badge-web");
-
   }
-
 
   // =========================
   // JUDUL
@@ -231,13 +222,11 @@ function openProject(projectId) {
 
   modalTitle.textContent = project.title;
 
-
   // =========================
   // JENIS PROJECT
   // =========================
 
   modalType.textContent = project.type;
-
 
   // =========================
   // PERAN
@@ -245,13 +234,11 @@ function openProject(projectId) {
 
   modalRole.textContent = project.role;
 
-
   // =========================
   // DESKRIPSI
   // =========================
 
   modalDescription.textContent = project.description;
-
 
   // =========================
   // TECHNOLOGIES
@@ -260,22 +247,16 @@ function openProject(projectId) {
   modalTechnologies.innerHTML = "";
 
   project.technologies.forEach(function (technology) {
-
     const span = document.createElement("span");
-
     span.textContent = technology;
-
     modalTechnologies.appendChild(span);
-
   });
-
 
   // =========================
   // LINK PROJECT
   // =========================
 
   modalProjectLink.href = project.link;
-
 
   // =========================
   // TAMPILKAN MODAL
@@ -287,23 +268,18 @@ function openProject(projectId) {
   document.body.style.overflow = "hidden";
 }
 
-
 // =========================
 // CLOSE PROJECT
 // =========================
 
 function closeProject() {
-
   const modal =
     document.getElementById("projectModal");
-
   // Tutup modal
   modal.classList.remove("active");
-
   // Aktifkan kembali scroll halaman
   document.body.style.overflow = "";
 }
-
 
 // =========================
 // CLOSE WHEN CLICK OUTSIDE
@@ -312,28 +288,20 @@ function closeProject() {
 document
   .getElementById("projectModal")
   .addEventListener("click", function (event) {
-
     // Jika yang diklik adalah area background modal
     if (event.target === this) {
-
       closeProject();
-
     }
-
   });
-
 
 // =========================
 // CLOSE WITH ESC KEY
 // =========================
 
 document.addEventListener("keydown", function (event) {
-
   // Jika tombol yang ditekan adalah Escape
   if (event.key === "Escape") {
-
     closeProject();
-
   }
 });
 
@@ -351,141 +319,96 @@ const GOOGLE_SCRIPT_URL =
 
 const contactForm =
   document.getElementById("contact-form");
-
 const submitButton =
   document.getElementById("submit-btn");
-
 const contactPopup =
   document.getElementById("contact-popup");
-
 const popupTitle =
   document.getElementById("popup-title");
-
 const popupMessage =
   document.getElementById("popup-message");
-
 const popupClose =
   document.getElementById("popup-close");
-
 const popupOk =
   document.getElementById("popup-ok");
-
 
 // =========================
 // OPEN POPUP
 // =========================
 
 function openContactPopup(type) {
-
   // Hapus class error sebelumnya
   contactPopup.classList.remove("error");
-
 
   // =========================
   // SUCCESS
   // =========================
 
   if (type === "success") {
-
     popupTitle.textContent =
-      "Pesan Terkirim!";
-
+      "Pesan Terkirim!"
     popupMessage.textContent =
       "Terima kasih sudah menghubungi saya. Pesan kamu berhasil dikirim.";
-
   }
-
-
-  // =========================
-  // ERROR
-  // =========================
 
   else {
-
     contactPopup.classList.add("error");
-
     popupTitle.textContent =
       "Pesan Gagal!";
-
     popupMessage.textContent =
       "Maaf, pesan kamu belum berhasil dikirim. Silakan coba lagi.";
-
   }
-
 
   // Tampilkan popup
   contactPopup.classList.add("active");
-
   // Matikan scroll halaman
   document.body.style.overflow = "hidden";
 }
 
-
 // =========================
 // CLOSE POPUP
 // =========================
-
 function closeContactPopup() {
-
   contactPopup.classList.remove("active");
-
   contactPopup.classList.remove("error");
-
   // Aktifkan kembali scroll
   document.body.style.overflow = "";
 }
 
-
 // =========================
 // SUBMIT FORM
 // =========================
-
 contactForm.addEventListener(
   "submit",
   async function (event) {
-
     // Mencegah halaman refresh
     event.preventDefault();
-
 
     // =========================
     // VALIDASI URL
     // =========================
-
     if (
       !GOOGLE_SCRIPT_URL ||
       GOOGLE_SCRIPT_URL ===
-        "MASUKKAN_URL_GOOGLE_APPS_SCRIPT_KAMU_DI_SINI"
+        "https://script.google.com/macros/s/AKfycbz2zRNIhRFYSWTkZCWg1MrdXRkwq9OwCKKpAtUBCHELRT9HntKb-hhmk5ZmfUsGH6co8Q/exec"
     ) {
-
-      console.error(
-        "Google Apps Script URL belum diisi."
-      );
-
+      console.error("Google Apps Script URL belum diisi.");
       openContactPopup("error");
-
       return;
     }
-
 
     // =========================
     // LOADING
     // =========================
-
     submitButton.classList.add("loading");
-
     submitButton.disabled = true;
 
-
     try {
-
       // =========================
       // AMBIL DATA FORM
       // =========================
-
       const formData =
         new FormData(contactForm);
-
 
       // =========================
       // KIRIM DATA
@@ -495,57 +418,37 @@ contactForm.addEventListener(
         GOOGLE_SCRIPT_URL,
         {
           method: "POST",
-
           body: formData,
-
           mode: "no-cors"
         }
       );
 
-
       // =========================
       // SUCCESS
       // =========================
-
       openContactPopup("success");
-
-
       // Kosongkan form
       contactForm.reset();
 
-
     } catch (error) {
-
-      // =========================
-      // ERROR
-      // =========================
-
       console.error(
         "Error mengirim pesan:",
         error
       );
-
       openContactPopup("error");
-
     }
-
 
     // =========================
     // SELESAI LOADING
     // =========================
-
     submitButton.classList.remove("loading");
-
     submitButton.disabled = false;
-
   }
 );
-
 
 // =========================
 // CLOSE POPUP BUTTON X
 // =========================
-
 popupClose.addEventListener(
   "click",
   function () {
@@ -553,11 +456,9 @@ popupClose.addEventListener(
   }
 );
 
-
 // =========================
 // CLOSE POPUP BUTTON OKE
 // =========================
-
 popupOk.addEventListener(
   "click",
   function () {
@@ -565,22 +466,216 @@ popupOk.addEventListener(
   }
 );
 
-
 // =========================
 // CLOSE CLICK OUTSIDE
 // =========================
-
 contactPopup.addEventListener(
   "click",
   function (event) {
-
     if (event.target === contactPopup) {
       closeContactPopup();
     }
-
   }
 );
 
+// =========================
+// CLOSE WITH ESC
+// =========================
+document.addEventListener(
+  "keydown",
+  function (event) {
+    if (
+      event.key === "Escape" &&
+      contactPopup.classList.contains("active")
+    ) {
+      closeContactPopup();
+    }
+  }
+);
+
+// =========================
+// CERTIFICATE DATA
+// =========================
+const certificates = {
+  certificate1: {
+    title: "Dasar Pemrograman Web",
+    issuer: "Dicoding Indonesia",
+    image: "img/sertificate1.png",
+    pdf: "asset/Sertifikat Dicoding (Dasar Pemrograman Web).pdf",
+  },
+
+  certificate2: {
+    title: "Front-End Web Pemula",
+    issuer: "Dicoding Indonesia",
+    image: "img/sertificate2.png",
+    pdf: "asset/Sertifikat Dicoding (Front End Web Pemula).pdf",
+  },
+
+  certificate3: {
+    title: "Dasar Pemrograman JavaScript",
+    issuer: "Dicoding Indonesia",
+    image: "img/sertificate3.png",
+    pdf: "asset/Sertifikat Dicoding (Dasar Pemrograman Javascript).pdf",
+  },
+
+  certificate4: {
+    title: "Dasar AI",
+    issuer: "Dicoding Indonesia",
+    image: "img/sertificate4.png",
+    pdf: "asset/Sertifikat Dicoding (Dasar AI).pdf",
+  },
+
+  certificate5: {
+    title: "Mikrotik VPN & OSPF di ROS 7",
+    issuer: "ID-Networkers",
+    image: "img/sertificate5.png",
+    pdf: "asset/Sertifikat Webinar (Mikrotik VPN).pdf",
+  },
+
+  certificate6: {
+    title: "Ancaman Cyber Global",
+    issuer: "Universitas Gadjah Mada",
+    image: "img/sertificate6.png",
+    pdf: "asset/Sertifikat UGM (Ancaman Cyber Global).pdf",
+  },
+
+  certificate7: {
+    title: "Sertifikat Microsoft Office Spesialist",
+    issuer: "Global Institute",
+    image: "img/sertificate7.png",
+    pdf: "asset/Sertifikasi MOS.pdf",
+  },
+
+};
+
+// =========================
+// OPEN CERTIFICATE
+// =========================
+function openCertificate(certificateId) {
+  const certificate =
+    certificates[certificateId];
+  // Jika data tidak ditemukan
+  if (!certificate) {
+    return;
+  }
+
+  // =========================
+  // AMBIL ELEMENT
+  // =========================
+  const modal =
+    document.getElementById(
+      "certificateModal"
+    );
+
+  const modalImage =
+    document.getElementById(
+      "certificateModalImage"
+    );
+
+  const modalLabel =
+    document.getElementById(
+      "certificateModalLabel"
+    );
+
+  const modalTitle =
+    document.getElementById(
+      "certificateModalTitle"
+    );
+
+  const modalIssuer =
+    document.getElementById(
+      "certificateModalIssuer"
+    );
+
+  const modalLink =
+    document.getElementById(
+      "certificateModalLink"
+    );
+
+  // =========================
+  // ISI DATA
+  // =========================
+  modalImage.src =
+    certificate.image;
+  modalImage.alt =
+    certificate.title;
+  modalLabel.textContent =
+    "Sertifikat";
+  modalTitle.textContent =
+    certificate.title;
+  modalIssuer.textContent =
+    certificate.issuer;
+  modalLink.href =
+    certificate.pdf;
+
+  // =========================
+  // TAMPILKAN MODAL
+  // =========================
+  modal.classList.add("active");
+  // Matikan scroll halaman
+  document.body.style.overflow =
+    "hidden";
+}
+
+// =========================
+// CLOSE CERTIFICATE
+// =========================
+function closeCertificate() {
+  const modal =
+    document.getElementById(
+      "certificateModal"
+    );
+  modal.classList.remove("active");
+  // Aktifkan kembali scroll
+  document.body.style.overflow =
+    "";
+}
+
+// =========================
+// CLOSE BUTTON
+// =========================
+document
+  .getElementById(
+    "certificateModalClose"
+  )
+  .addEventListener(
+    "click",
+    function () {
+      closeCertificate();
+    }
+  );
+
+// =========================
+// CLOSE BUTTON "TUTUP"
+// =========================
+document
+  .getElementById(
+    "certificateModalOk"
+  )
+  .addEventListener(
+    "click",
+    function () {
+      closeCertificate();
+    }
+  );
+
+// =========================
+// CLICK OUTSIDE MODAL
+// =========================
+document
+  .getElementById(
+    "certificateModal"
+  )
+  .addEventListener(
+    "click",
+    function (event) {
+      if (
+        event.target === this
+      ) {
+        closeCertificate();
+      }
+    }
+  );
 
 // =========================
 // CLOSE WITH ESC
@@ -589,13 +684,20 @@ contactPopup.addEventListener(
 document.addEventListener(
   "keydown",
   function (event) {
-
     if (
-      event.key === "Escape" &&
-      contactPopup.classList.contains("active")
+      event.key === "Escape"
     ) {
-      closeContactPopup();
+      const modal =
+        document.getElementById(
+          "certificateModal"
+        );
+      if (
+        modal.classList.contains(
+          "active"
+        )
+      ) {
+        closeCertificate();
+      }
     }
-
   }
 );
