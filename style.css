@@ -588,13 +588,11 @@ span {
 /* =========================
    MODAL INFO
 ========================= */
-
 .modal-project-info {
   padding: 0.8rem 1.5rem 1.5rem;
 }
 
 /* HEADING */
-
 .modal-project-heading {
   margin-bottom: 1rem;
 }
@@ -635,7 +633,6 @@ span {
 /* =========================
    MODAL META
 ========================= */
-
 .modal-project-meta {
   display: flex;
   flex-wrap: wrap;
@@ -665,7 +662,6 @@ span {
 /* =========================
    MODAL SECTION
 ========================= */
-
 .modal-section {
   margin-bottom: 1rem;
 }
@@ -677,7 +673,7 @@ span {
 }
 
 .modal-section p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
   text-align: justify;
   color: #333;
@@ -698,7 +694,6 @@ span {
 /* =========================
    TECHNOLOGIES
 ========================= */
-
 .modal-technologies {
   display: flex;
   flex-wrap: wrap;
@@ -717,7 +712,6 @@ span {
 /* =========================
    MODAL BUTTON
 ========================= */
-
 .modal-project-buttons {
   display: flex;
   flex-wrap: wrap;
