@@ -749,6 +749,19 @@ span {
 }
 
 /* =========================
+   VIEW ALL PROJECTS
+========================= */
+.project-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.project-more .btn {
+  color: black;
+}
+
+/* =========================
    SERTIFICATE
 ========================= */
 .sertificate {
