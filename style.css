@@ -1077,6 +1077,17 @@ span {
   background-color: #ddd;
   border-color: #ddd;
 }
+
+/* VIEW ALL CERTIFICATES */
+.sertificate-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.sertificate-more .btn {
+  color: black;
+}
 /* =========================
    END SERTIFICATE
 ========================= */
@@ -1084,7 +1095,6 @@ span {
 /* =========================
    CONTACT
 ========================= */
-
 .contact {
   background-color: var(--bg-color);
   color: var(--text-color);

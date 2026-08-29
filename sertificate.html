@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sertificate | Portofolio</title>
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">Portofolio</a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#project">Project</a>
+        <a href="sertificate.html" class="active">Sertificate</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+    
+    <!-- =========================
+         SERTIFICATE
+    ========================= -->
+    <section class="sertificate" id="sertificate">
+
+      <h2 class="heading"><span>Sertificate</span></h2>
+      <div class="sertificate-container">
+
+        <!-- CERTIFICATE 1 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate1')">
+          <div class="sertificate-image">
+            <img src="img/sertificate1.png" alt="Dasar Pemrograman Web"/>
+            <div class="sertificate-overlay">
+              <i class="bx bx-show"></i>
+              <span>View Sertificate</span>
+            </div>
+          </div>
+        </div>
+        <!-- CERTIFICATE 2 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate2')">
+          <div class="sertificate-image">
+            <img src="img/sertificate2.png" alt="Front-End Web Pemula"/>
+            <div class="sertificate-overlay">
+              <i class="bx bx-show"></i>
+              <span>View Sertificate</span>
+            </div>
+          </div>
+        </div>
+        <!-- CERTIFICATE 3 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate3')">
+          <div class="sertificate-image">
+            <img src="img/sertificate3.png" alt="Dasar Pemrograman JavaScript"/>
+            <div class="sertificate-overlay">
+              <i class="bx bx-show"></i>
+              <span>View Sertificate</span>
+            </div>
+          </div>
+        </div>
+        <!-- CERTIFICATE 4 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate4')">
+          <div class="sertificate-image">
+            <img src="img/sertificate4.png" alt="Dasar AI"/>
+            <div class="sertificate-overlay">
+              <i class="bx bx-show"></i>
+              <span>View Sertificate</span>
+            </div>
+          </div>
+        </div>
+        <!-- CERTIFICATE 5 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate5')">
+          <div class="sertificate-image">
+            <img src="img/sertificate5.png" alt="Webinar Mikrotik VPN"/>
+            <div class="sertificate-overlay">
+              <i class="bx bx-show"></i>
+              <span>View Sertificate</span>
+            </div>
+          </div>
+        </div>
+        <!-- CERTIFICATE 6 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate6')">
+          <div class="sertificate-image">
+            <img src="img/sertificate6.png" alt="Ancaman Cyber Global"/>
+            <div class="sertificate-overlay">
+              <i class="bx bx-show"></i>
+              <span>View Sertificate</span>
+            </div>
+          </div>
+        </div>
+        <!-- CERTIFICATE 7 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate7')">
+          <div class="sertificate-image">
+            <img src="img/sertificate7.png" alt="Microsoft Office Specialist"/>
+            <div class="sertificate-overlay">
+              <i class="bx bx-show"></i>
+              <span>View Sertificate</span>
+            </div>
+          </div>
+        </div>
+        <!-- CERTIFICATE 8 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate8')">
+          <div class="sertificate-image">
+            <img src="img/sertificate8.png" alt="Test of English for International Communication"/>
+            <div class="sertificate-overlay">
+              <i class="bx bx-show"></i>
+              <span>View Sertificate</span>
+            </div>
+          </div>
+        </div>
+        <!-- CERTIFICATE 9 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate9')">
+          <div class="sertificate-image">
+            <img src="img/sertificate9.jpg" alt="LKBB Bimantara Se-Banten"/>
+            <div class="sertificate-overlay">
+              <i class="bx bx-show"></i>
+              <span>View Sertificate</span>
+            </div>
+          </div>
+        </div>
+        <!-- CERTIFICATE 10 -->
+        <div class="sertificate-box" onclick="openCertificate('certificate10')">
+          <div class="sertificate-image">
+            <img src="img/sertificate10.png" alt="The Difference Between UI and UX"/>
+            <div class="sertificate-overlay">
+              <i class="bx bx-show"></i>
+              <span>View Sertificate</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- END SERTIFICATE -->
+
+    <!-- CERTIFICATE MODAL -->
+    <div class="certificate-modal" id="certificateModal">
+      <div class="certificate-modal-content">
+
+        <!-- CLOSE BUTTON -->
+        <button type="button" class="certificate-modal-close" id="certificateModalClose" aria-label="Tutup">&times;</button>
+
+        <!-- CERTIFICATE IMAGE -->
+        <div class="modal-certificate-image">
+          <img src="" id="certificateModalImage" alt=""/>
+        </div>
+
+        <!-- CERTIFICATE INFORMATION -->
+        <div class="modal-certificate-info">
+
+          <span
+            class="modal-certificate-label"
+            id="certificateModalLabel"
+          >
+            Sertificate
+          </span>
+
+          <h3 id="certificateModalTitle">
+            Nama Sertificate
+          </h3>
+
+          <p id="certificateModalIssuer">
+            Penyelenggara
+          </p>
+
+
+          <!-- BUTTON -->
+          <div class="modal-certificate-buttons">
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="modal-certificate-btn primary-certificate-btn"
+              id="certificateModalLink"
+            >
+              <i class="bx bx-file"></i>
+              View Sertificate
+            </a>
+
+            <button
+              type="button"
+              class="modal-certificate-btn secondary-certificate-btn"
+              id="certificateModalOk"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END CERTIFICATE MODAL -->
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>
