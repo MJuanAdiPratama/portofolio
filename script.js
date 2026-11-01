@@ -84,7 +84,7 @@ const projects = {
     category: "Web",
     type: "Mandiri",
     role: "Fullstack",
-    image: "img/project.png",
+    image: "img/project3.png",
 
     description:
       "Project UAS Pemrograman Berbasis Web membuat website ecommerce. Saya membuat QxuanStore yaitu sebuah toko sepatu online modern dengan fitur pencarian dan filter kategori produk, keranjang belanja, checkout dan integrasi pembayaran otomatis via Midtrans, serta dashboard admin untuk manajemen inventaris stok dan laporan penjualan.",
