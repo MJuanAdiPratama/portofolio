@@ -84,7 +84,7 @@ const projects = {
     category: "Web",
     type: "Mandiri",
     role: "Fullstack",
-    image: "img/project.jpg",
+    image: "img/project.png",
 
     description:
       "Project UAS mata kuliah Pemrograman Berbasis Web untuk membuat website ecommerce sepatu dengan fitur pencarian produk, manajemen kategori, dashboard admin dan pemesanan melalui WhatsApp.",
