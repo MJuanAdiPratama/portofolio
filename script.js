@@ -151,7 +151,7 @@ const projects = {
 
     technologies: ["Flutter", "Dart", "Firebase"],
 
-    link: "https://github.com/ariebhewhe/globalSabtuGenap2425.git",
+    link: "https://www.figma.com/design/UpDHzglt1AReeBChhv3SmE/Bakso-Djatigiri?node-id=0-1&t=T6I4dka8WaRfZoZv-1",
   },
 };
 
