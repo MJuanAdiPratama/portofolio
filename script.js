@@ -153,6 +153,21 @@ const projects = {
 
     link: "https://www.figma.com/design/UpDHzglt1AReeBChhv3SmE/Bakso-Djatigiri?node-id=0-1&t=T6I4dka8WaRfZoZv-1",
   },
+
+  "posyandu-merpati": {
+    title: "Posyandu Merpati App",
+    category: "Mobile",
+    type: "Tugas Skripsi",
+    role: "Fullstack",
+    image: "img/project8.png",
+
+    description:
+      "Project Skripsi membuat aplikasi posyandu untuk monitoring pertumbuhan balita, dilengkapi fitur manajemen data dan verifikasi balita, pencatatan serta kalkulasi otomatis status gizi dan imunisasi, penjadwalan kegiatan posyandu, pencetakan laporan (PDF/Excel), serta portal edukasi dan notifikasi real-time untuk orang tua.",
+
+    technologies: ["Flutter", "Dart", "Supabase"],
+
+    link: "https://github.com/MJuanAdiPratama/posyandu_merpati.git",
+  },
 };
 
 // ======================================================
