@@ -97,7 +97,7 @@ const projects = {
   "web-company": {
     title: "Website Company (Rans)",
     category: "Web",
-    type: "Mandiri",
+    type: "Tugas Mandiri",
     role: "Frontend",
     image: "img/project4.png",
 
@@ -167,6 +167,21 @@ const projects = {
     technologies: ["Flutter", "Dart", "Supabase"],
 
     link: "https://github.com/MJuanAdiPratama/posyandu_merpati.git",
+  },
+
+  "undangan-pernikahan": {
+    title: "Undangan Pernikahan",
+    category: "Website",
+    type: "Mandiri",
+    role: "Fullstack",
+    image: "img/project9.png",
+
+    description:
+      "Website Undangan Pernikahan Digital dilengkapi fitur musik latar otomatis, galeri foto interaktif, form ucapan real-time, integrasi Google Calendar, amplop digital, serta Dashboard Admin untuk manajemen tamu dan porsi katering.",
+
+    technologies: ["Next.js", "React", "Tailwind", "Supabase"],
+
+    link: "https://github.com/MJuanAdiPratama/undangan.git",
   },
 };
 
