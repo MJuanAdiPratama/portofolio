@@ -97,12 +97,12 @@ const projects = {
   "web-company": {
     title: "Website Company (Rans)",
     category: "Web",
-    type: "Tugas Mandiri",
+    type: "Mandiri",
     role: "Frontend",
     image: "img/project4.png",
 
     description:
-      "Project mata kuliah Perancangan Web untuk membuat website company dengan mengambil inspirasi dari RANS Entertainment. Website dirancang menggunakan Bootstrap sebagai media informasi perusahaan.",
+      "Project tugas kuliah Perancangan Web untuk membuat website company dengan mengambil inspirasi dari RANS Entertainment. Website dirancang menggunakan Bootstrap sebagai media informasi perusahaan.",
 
     technologies: ["Css", "PHP", "Javascript"],
 
@@ -127,7 +127,7 @@ const projects = {
   "franada-parfume": {
     title: "Franada Parfume",
     category: "Web",
-    type: "Tugas Kelompok",
+    type: "Kelompok",
     role: "UI/UX Designer",
     image: "img/project6.png",
 
@@ -142,12 +142,12 @@ const projects = {
   "bakso-djatigiri": {
     title: "Bakso Djatigiri App",
     category: "Mobile",
-    type: "Tugas Kelompok",
+    type: "Kelompok",
     role: "Frontend & UI UX",
     image: "img/project7.png",
 
     description:
-      "Project Aplikasi Mobile UAS membuat aplikasi UMKM di Bakso Djatigiri untuk sistem kasir dan manajemen stok, dilengkapi fitur pencatatan transaksi penjualan dan pemantauan stok barang secara real-time.",
+      "Project UAS Aplikasi Mobile membuat aplikasi UMKM di Bakso Djatigiri untuk sistem kasir dan manajemen stok, dilengkapi fitur pencatatan transaksi penjualan dan pemantauan stok barang secara real-time.",
 
     technologies: ["Flutter", "Dart", "Firebase"],
 
@@ -157,7 +157,7 @@ const projects = {
   "posyandu-merpati": {
     title: "Posyandu Merpati App",
     category: "Mobile",
-    type: "Tugas Skripsi",
+    type: "Skripsi",
     role: "Fullstack",
     image: "img/project8.png",
 
