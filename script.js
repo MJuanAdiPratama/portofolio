@@ -500,13 +500,6 @@ const certificates = {
     file: "asset/Sertifikat UGM (Ancaman Cyber Global).pdf",
   },
 
-  // certificate7: {
-  //   title: "Microsoft Office Specialist",
-  //   issuer: "Microsoft",
-  //   image: "img/sertificate7.png",
-  //   file: "asset/Sertifikat MOS.pdf",
-  // },
-
   certificate8: {
     title: "Test of English for International Communication",
     issuer: "TOEIC",
