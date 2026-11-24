@@ -488,14 +488,14 @@ const certificates = {
 
   certificate5: {
     title: "Mikrotik VPN",
-    issuer: "Webinar",
+    issuer: "Webinar ID-Networkers",
     image: "img/sertificate5.png",
     file: "asset/Sertifikat Webinar (Mikrotik VPN).pdf",
   },
 
   certificate6: {
     title: "Ancaman Cyber Global",
-    issuer: "Universitas Gadjah Mada",
+    issuer: "Fakultas Ilmu Sosial dan Politik, Universitas Gadjah Mada",
     image: "img/sertificate6.png",
     file: "asset/Sertifikat UGM (Ancaman Cyber Global).pdf",
   },
@@ -515,17 +515,24 @@ const certificates = {
   },
 
   certificate9: {
-    title: "LKBB Bimantara Se-Banten",
-    issuer: "LKBB Bimantara",
+    title: "Panitia LKBB Bimantara Se-Banten",
+    issuer: "BEM Bimantara, Institut Teknologi dan Bisnis Bina Sarana Global",
     image: "img/sertificate9.jpg",
     file: "asset/Sertifikat LKBB.pdf",
   },
 
   certificate10: {
     title: "The Difference Between UI and UX: Understanding the Core Concepts",
-    issuer: "Webinar / Seminar",
+    issuer: "Webinar Kesatria Academy",
     image: "img/sertificate10.png",
     file: "asset/Sertifikat NgabuburIT.pdf",
+  },
+
+  certificate11: {
+    title: "Peserta Duta Lingkungan Hidup Sehat (Visioning Camp)",
+    issuer: "Sanggar Lingkungan Hidup Sehat, Cirebon",
+    image: "img/sertificate11.jpeg",
+    file: "asset/Sertifikat Visioning Camp.pdf",
   },
 };
 
