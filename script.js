@@ -599,82 +599,34 @@ function closeCertificate() {
 // ======================================================
 function randomizeCertificates() {
   const container = document.querySelector(".sertificate-container");
-  if (!container) {
-    return;
-  }
+  if (!container) return;
 
-  // ====================================================
-  // CEK HALAMAN
-  // ====================================================
   const isCertificatePage = window.location.pathname
     .toLowerCase()
     .includes("sertificate.html");
-
-  // ====================================================
-  // TOMBOL VIEW ALL
-  // ====================================================
   const viewAllButton = document.querySelector(".sertificate-more");
 
-  // ====================================================
-  // AMBIL SEMUA CARD
-  // ====================================================
-  const certificateCards = Array.from(
-    container.querySelectorAll(".sertificate-box"),
-  );
+  // Halaman sertifikat memakai wrapper agar tombol tiap card tetap ikut card
+  // ketika urutan diacak. Halaman utama memakai card langsung.
+  const items = Array.from(container.querySelectorAll(":scope > .certificate-item"));
+  const cards = items.length
+    ? items
+    : Array.from(container.querySelectorAll(":scope > .sertificate-box"));
 
-  // ====================================================
-  // JIKA JUMLAH <= 6
-  // SEMBUNYIKAN VIEW ALL
-  // ====================================================
-  if (certificateCards.length <= 6) {
-    if (viewAllButton) {
-      viewAllButton.style.display = "none";
-    }
-  } else {
-    // Kalau jumlah certificate
-    // lebih dari 6
-    if (viewAllButton && !isCertificatePage) {
-      viewAllButton.style.display = "flex";
-    }
+  if (viewAllButton) {
+    viewAllButton.style.display = cards.length > 6 && !isCertificatePage ? "flex" : "none";
   }
 
-  // ====================================================
-  // JIKA DI SERTIFICATE.HTML
-  // TAMPILKAN SEMUA
-  // ====================================================
-  if (isCertificatePage) {
-    certificateCards.forEach(function (certificate) {
-      certificate.style.display = "";
-    });
-    return;
-  }
-
-  // ====================================================
-  // ACAK CERTIFICATE
-  // ====================================================
-  for (let i = certificateCards.length - 1; i > 0; i--) {
+  for (let i = cards.length - 1; i > 0; i--) {
     const randomIndex = Math.floor(Math.random() * (i + 1));
-    [certificateCards[i], certificateCards[randomIndex]] = [
-      certificateCards[randomIndex],
-      certificateCards[i],
-    ];
+    [cards[i], cards[randomIndex]] = [cards[randomIndex], cards[i]];
   }
 
-  // ====================================================
-  // TAMPILKAN MAKSIMAL 6
-  // ====================================================
-  certificateCards.forEach(function (certificate, index) {
-    // Masukkan kembali card
-    // berdasarkan urutan random
-    container.appendChild(certificate);
-    if (index < 6) {
-      certificate.style.display = "";
-    } else {
-      certificate.style.display = "none";
-    }
+  cards.forEach((item, index) => {
+    container.appendChild(item);
+    item.style.display = isCertificatePage || index < 6 ? "" : "none";
   });
 }
-
 // ======================================================
 // CERTIFICATE MODAL EVENT
 // ======================================================
