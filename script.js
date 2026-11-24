@@ -606,6 +606,11 @@ function randomizeCertificates() {
     .includes("sertificate.html");
   const viewAllButton = document.querySelector(".sertificate-more");
 
+  // Pastikan tombol view all berada di luar / setelah container agar selalu di bawah card
+  if (viewAllButton && container.contains(viewAllButton)) {
+    container.parentNode.insertBefore(viewAllButton, container.nextSibling);
+  }
+
   // Halaman sertifikat memakai wrapper agar tombol tiap card tetap ikut card
   // ketika urutan diacak. Halaman utama memakai card langsung.
   const items = Array.from(container.querySelectorAll(":scope > .certificate-item"));
